@@ -3,7 +3,7 @@
 Plugin Name: Custom Field Suite - Synchronize
 Plugin URI: https://wordpress.org/plugins/custom-field-suite/
 Description: Synchronize postmeta with CFS
-Version: 0.1
+Version: 0.2
 Author: Matt Gibbs
 Author URI: https://facetwp.com/
 
