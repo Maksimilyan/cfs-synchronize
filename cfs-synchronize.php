@@ -29,6 +29,9 @@ class CFS_Synchronize
 {
 
     function __construct() {
+
+        define( 'CFS_SYNC_DIR', dirname( __FILE__ ) );
+
         add_action( 'init', array( $this, 'init' ), 12 );
     }
 
@@ -53,7 +56,7 @@ class CFS_Synchronize
      * Route to the correct edit screen
      */
     function settings_page() {
-        include( dirname( __FILE__ ) . '/templates/page-settings.php' );
+        include( CFS_SYNC_DIR . '/templates/page-settings.php' );
     }
 }
 
