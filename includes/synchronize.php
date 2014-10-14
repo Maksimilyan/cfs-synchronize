@@ -39,7 +39,7 @@ function cfs_map_values() {
 
     $query = new WP_Query( array(
         'post_type' => 'any',
-        'posts_per_page' => 5,
+        'posts_per_page' => -1,
         'post_status' => 'publish',
         'fields' => 'ids',
     ) );
@@ -54,9 +54,7 @@ function cfs_map_values() {
 
             // See which fields are already in the cfs_values table for this post ID
             $existing_field_ids = $wpdb->get_col( "
-                SELECT DISTINCT field_id
-                FROM {$wpdb->prefix}cfs_values
-                WHERE post_id IN ('$post_id')"
+                SELECT DISTINCT field_id FROM {$wpdb->prefix}cfs_values WHERE post_id IN ('$post_id')"
             );
 
             // Loop through field groups
