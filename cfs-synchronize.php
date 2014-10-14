@@ -56,6 +56,7 @@ class CFS_Synchronize
      * Route to the correct edit screen
      */
     function settings_page() {
+        include( CFS_SYNC_DIR . '/includes/synchronize.php' );
         include( CFS_SYNC_DIR . '/templates/page-settings.php' );
     }
 }
