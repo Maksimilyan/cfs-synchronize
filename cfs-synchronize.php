@@ -57,6 +57,11 @@ class CFS_Synchronize
      */
     function settings_page() {
         include( CFS_SYNC_DIR . '/includes/synchronize.php' );
+
+        if ( isset( $_POST['sync'] ) ) {
+            cfs_map_values();
+        }
+
         include( CFS_SYNC_DIR . '/templates/page-settings.php' );
     }
 }

@@ -81,5 +81,3 @@ function cfs_map_values() {
         }
     }
 }
-
-cfs_map_values();
